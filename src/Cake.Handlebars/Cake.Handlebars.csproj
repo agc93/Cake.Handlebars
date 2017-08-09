@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- <TargetFramework>netstandard1.6</TargetFramework> -->
+    <TargetFrameworks>net45;netstandard1.6</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Cake.Core" Version="0.21.1" />
+    <PackageReference Include="Handlebars.Net" Version="1.9.0" />
+  </ItemGroup>
+</Project>
