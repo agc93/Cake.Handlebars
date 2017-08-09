@@ -1,8 +1,14 @@
 {
   "Cake.Handlebars": "Cake.Handlebars.yml",
   "Cake.Handlebars.HandlebarsAliases": "Cake.Handlebars.HandlebarsAliases.yml",
-  "Cake.Handlebars.HandlebarsAliases.CompileTemplate(Cake.Core.ICakeContext,Cake.Core.IO.FilePath)": "Cake.Handlebars.HandlebarsAliases.yml",
   "Cake.Handlebars.HandlebarsAliases.CompileTemplate(Cake.Core.ICakeContext,System.String)": "Cake.Handlebars.HandlebarsAliases.yml",
-  "Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext,System.String)": "Cake.Handlebars.HandlebarsAliases.yml",
-  "Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext,System.String,System.Object)": "Cake.Handlebars.HandlebarsAliases.yml"
+  "Cake.Handlebars.HandlebarsAliases.CompileTemplateFromFile(Cake.Core.ICakeContext,Cake.Core.IO.FilePath)": "Cake.Handlebars.HandlebarsAliases.yml",
+  "Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext,System.String,System.Object)": "Cake.Handlebars.HandlebarsAliases.yml",
+  "Cake.Handlebars.HandlebarsAliases.RenderTemplateFromFile(Cake.Core.ICakeContext,Cake.Core.IO.FilePath,System.Object)": "Cake.Handlebars.HandlebarsAliases.yml",
+  "Cake.Handlebars.TemplateFileReader": "Cake.Handlebars.TemplateFileReader.yml",
+  "Cake.Handlebars.TemplateFileReader.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.IO.FilePath)": "Cake.Handlebars.TemplateFileReader.yml",
+  "Cake.Handlebars.TemplateFileReader.CompileTemplate": "Cake.Handlebars.TemplateFileReader.yml",
+  "Cake.Handlebars.TemplateFileReader.CompileTemplateToWriter": "Cake.Handlebars.TemplateFileReader.yml",
+  "Cake.Handlebars.TemplateFileReader.ReadTemplate": "Cake.Handlebars.TemplateFileReader.yml",
+  "Cake.Handlebars.TemplateFileReader.RenderTemplate(System.Object)": "Cake.Handlebars.TemplateFileReader.yml"
 }
