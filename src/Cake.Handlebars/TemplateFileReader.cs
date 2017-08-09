@@ -7,12 +7,10 @@ namespace Cake.Handlebars
 {
     public class TemplateFileReader
     {
-        private readonly FilePath _filePath;
-        private readonly IFileSystem _fs;
         private readonly IFile _file;
 
         public TemplateFileReader(IFileSystem fs, FilePath templateFilePath) {
-            if (!_fs.Exist(templateFilePath)) throw new FileNotFoundException("Could not find requested template file", templateFilePath.FullPath);
+            if (!fs.Exist(templateFilePath)) throw new FileNotFoundException("Could not find requested template file", templateFilePath.FullPath);
             _file = fs.GetFile(templateFilePath);
         }
 
