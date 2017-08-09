@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Cake.Handlebars
+  commentId: N:Cake.Handlebars
+  id: Cake.Handlebars
+  children:
+  - Cake.Handlebars.HandlebarsAliases
+  langs:
+  - csharp
+  - vb
+  name: Cake.Handlebars
+  nameWithType: Cake.Handlebars
+  fullName: Cake.Handlebars
+  type: Namespace
+  assemblies:
+  - Cake.Handlebars
+references:
+- uid: Cake.Handlebars.HandlebarsAliases
+  commentId: T:Cake.Handlebars.HandlebarsAliases
+  isExternal: true
+  name: HandlebarsAliases
+  nameWithType: HandlebarsAliases
+  fullName: Cake.Handlebars.HandlebarsAliases

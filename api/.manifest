@@ -1,0 +1,8 @@
+{
+  "Cake.Handlebars": "Cake.Handlebars.yml",
+  "Cake.Handlebars.HandlebarsAliases": "Cake.Handlebars.HandlebarsAliases.yml",
+  "Cake.Handlebars.HandlebarsAliases.CompileTemplate(Cake.Core.ICakeContext,Cake.Core.IO.FilePath)": "Cake.Handlebars.HandlebarsAliases.yml",
+  "Cake.Handlebars.HandlebarsAliases.CompileTemplate(Cake.Core.ICakeContext,System.String)": "Cake.Handlebars.HandlebarsAliases.yml",
+  "Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext,System.String)": "Cake.Handlebars.HandlebarsAliases.yml",
+  "Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext,System.String,System.Object)": "Cake.Handlebars.HandlebarsAliases.yml"
+}

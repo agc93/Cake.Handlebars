@@ -99,7 +99,7 @@ Task("Build")
 	}
 });
 
-Task("Publish")
+Task("Publish-Build")
 	.IsDependentOn("Clean")
 	.IsDependentOn("Restore")
 	.Does(() =>
@@ -134,14 +134,18 @@ Task("Run-Unit-Tests")
 	}
 });
 
-Task("Generate-Docs").Does(() => {
+Task("Generate-Docs")
+	.IsDependentOn("Build")
+	.Does(() =>
+{
+	DocFxMetadata("./docfx/docfx.json");
 	DocFxBuild("./docfx/docfx.json");
 	Zip("./docfx/_site/", artifacts + "/docfx.zip");
 });
 
 Task("Post-Build")
 	.IsDependentOn("Build")
-	.IsDependentOn("Publish")
+	.IsDependentOn("Publish-Build")
 	.IsDependentOn("Run-Unit-Tests")
 	.Does(() =>
 {
@@ -189,5 +193,9 @@ Task("NuGet")
 
 Task("Default")
 	.IsDependentOn("NuGet");
+
+Task("Publish")
+	.IsDependentOn("NuGet")
+	.IsDependentOn("Generate-Docs");
 
 RunTarget(target);

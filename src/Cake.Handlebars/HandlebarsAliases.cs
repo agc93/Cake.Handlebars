@@ -13,27 +13,30 @@ namespace Cake.Handlebars
     public static class HandlebarsAliases
     {
         [CakeMethodAlias]
-        public static string RenderTemplate(this ICakeContext ctx, string template) {
-            var compiled = Hbs.Compile(template);
-            return compiled(new {});
-        }
-
-        [CakeMethodAlias]
         public static string RenderTemplate(this ICakeContext ctx, string template, object data) {
+            ctx = ctx ?? throw new ArgumentNullException(nameof(ctx));
             var compiled = Hbs.Compile(template);
             return compiled(data);
         }
 
         [CakeMethodAlias]
+        public static string RenderTemplateFromFile(this ICakeContext ctx, FilePath templateFilePath, object data) {
+            ctx = ctx ?? throw new ArgumentNullException(nameof(ctx));
+            var file = new TemplateFileReader(ctx.FileSystem, templateFilePath);
+            return file.RenderTemplate(data);
+        }
+
+        [CakeMethodAlias]
         public static Func<object, string> CompileTemplate(this ICakeContext ctx, string template) {
+            ctx = ctx ?? throw new ArgumentNullException(nameof(ctx));
             return Hbs.Compile(template);
         }
 
         [CakeMethodAlias]
-        public static Action<TextWriter, string> CompileTemplate(this ICakeContext ctx, FilePath templateFilePath) {
-            var templateFile = ctx.FileSystem.GetFile(templateFilePath);
-            var reader = new StreamReader(templateFile.OpenRead());
-            return Hbs.Compile(reader);
+        public static Func<object, string> CompileTemplateFromFile(this ICakeContext ctx, FilePath templateFilePath) {
+            ctx = ctx ?? throw new ArgumentNullException(nameof(ctx));
+            var file = new TemplateFileReader(ctx.FileSystem, templateFilePath);
+            return file.CompileTemplate();
         }
     }
 }

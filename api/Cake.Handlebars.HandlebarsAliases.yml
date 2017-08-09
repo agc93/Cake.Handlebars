@@ -1,0 +1,479 @@
+### YamlMime:ManagedReference
+items:
+- uid: Cake.Handlebars.HandlebarsAliases
+  commentId: T:Cake.Handlebars.HandlebarsAliases
+  id: HandlebarsAliases
+  parent: Cake.Handlebars
+  children:
+  - Cake.Handlebars.HandlebarsAliases.CompileTemplate(Cake.Core.ICakeContext,Cake.Core.IO.FilePath)
+  - Cake.Handlebars.HandlebarsAliases.CompileTemplate(Cake.Core.ICakeContext,System.String)
+  - Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext,System.String)
+  - Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext,System.String,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: HandlebarsAliases
+  nameWithType: HandlebarsAliases
+  fullName: Cake.Handlebars.HandlebarsAliases
+  type: Class
+  source:
+    path: Cake.Handlebars
+    isExternal: true
+  assemblies:
+  - Cake.Handlebars
+  namespace: Cake.Handlebars
+  syntax:
+    content: 'public static class HandlebarsAliases : Object'
+    content.vb: >-
+      Public Module HandlebarsAliases
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext,System.String)
+  commentId: M:Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext,System.String)
+  id: RenderTemplate(Cake.Core.ICakeContext,System.String)
+  isExtensionMethod: true
+  parent: Cake.Handlebars.HandlebarsAliases
+  langs:
+  - csharp
+  - vb
+  name: RenderTemplate(ICakeContext, String)
+  nameWithType: HandlebarsAliases.RenderTemplate(ICakeContext, String)
+  fullName: Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext, System.String)
+  type: Method
+  source:
+    path: Cake.Handlebars
+    isExternal: true
+  assemblies:
+  - Cake.Handlebars
+  namespace: Cake.Handlebars
+  syntax:
+    content: public static string RenderTemplate(this ICakeContext ctx, string template)
+    parameters:
+    - id: ctx
+      type: Cake.Core.ICakeContext
+    - id: template
+      type: System.String
+    return:
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RenderTemplate(ctx As ICakeContext, template As String) As String
+  overload: Cake.Handlebars.HandlebarsAliases.RenderTemplate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext,System.String,System.Object)
+  commentId: M:Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext,System.String,System.Object)
+  id: RenderTemplate(Cake.Core.ICakeContext,System.String,System.Object)
+  isExtensionMethod: true
+  parent: Cake.Handlebars.HandlebarsAliases
+  langs:
+  - csharp
+  - vb
+  name: RenderTemplate(ICakeContext, String, Object)
+  nameWithType: HandlebarsAliases.RenderTemplate(ICakeContext, String, Object)
+  fullName: Cake.Handlebars.HandlebarsAliases.RenderTemplate(Cake.Core.ICakeContext, System.String, System.Object)
+  type: Method
+  source:
+    path: Cake.Handlebars
+    isExternal: true
+  assemblies:
+  - Cake.Handlebars
+  namespace: Cake.Handlebars
+  syntax:
+    content: public static string RenderTemplate(this ICakeContext ctx, string template, object data)
+    parameters:
+    - id: ctx
+      type: Cake.Core.ICakeContext
+    - id: template
+      type: System.String
+    - id: data
+      type: System.Object
+    return:
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RenderTemplate(ctx As ICakeContext, template As String, data As Object) As String
+  overload: Cake.Handlebars.HandlebarsAliases.RenderTemplate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Cake.Handlebars.HandlebarsAliases.CompileTemplate(Cake.Core.ICakeContext,System.String)
+  commentId: M:Cake.Handlebars.HandlebarsAliases.CompileTemplate(Cake.Core.ICakeContext,System.String)
+  id: CompileTemplate(Cake.Core.ICakeContext,System.String)
+  isExtensionMethod: true
+  parent: Cake.Handlebars.HandlebarsAliases
+  langs:
+  - csharp
+  - vb
+  name: CompileTemplate(ICakeContext, String)
+  nameWithType: HandlebarsAliases.CompileTemplate(ICakeContext, String)
+  fullName: Cake.Handlebars.HandlebarsAliases.CompileTemplate(Cake.Core.ICakeContext, System.String)
+  type: Method
+  source:
+    path: Cake.Handlebars
+    isExternal: true
+  assemblies:
+  - Cake.Handlebars
+  namespace: Cake.Handlebars
+  syntax:
+    content: public static Func<object, string> CompileTemplate(this ICakeContext ctx, string template)
+    parameters:
+    - id: ctx
+      type: Cake.Core.ICakeContext
+    - id: template
+      type: System.String
+    return:
+      type: System.Func{System.Object,System.String}
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CompileTemplate(ctx As ICakeContext, template As String) As Func(Of Object, String)
+  overload: Cake.Handlebars.HandlebarsAliases.CompileTemplate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Cake.Handlebars.HandlebarsAliases.CompileTemplate(Cake.Core.ICakeContext,Cake.Core.IO.FilePath)
+  commentId: M:Cake.Handlebars.HandlebarsAliases.CompileTemplate(Cake.Core.ICakeContext,Cake.Core.IO.FilePath)
+  id: CompileTemplate(Cake.Core.ICakeContext,Cake.Core.IO.FilePath)
+  isExtensionMethod: true
+  parent: Cake.Handlebars.HandlebarsAliases
+  langs:
+  - csharp
+  - vb
+  name: CompileTemplate(ICakeContext, FilePath)
+  nameWithType: HandlebarsAliases.CompileTemplate(ICakeContext, FilePath)
+  fullName: Cake.Handlebars.HandlebarsAliases.CompileTemplate(Cake.Core.ICakeContext, Cake.Core.IO.FilePath)
+  type: Method
+  source:
+    path: Cake.Handlebars
+    isExternal: true
+  assemblies:
+  - Cake.Handlebars
+  namespace: Cake.Handlebars
+  syntax:
+    content: public static Action<TextWriter, string> CompileTemplate(this ICakeContext ctx, FilePath templateFilePath)
+    parameters:
+    - id: ctx
+      type: Cake.Core.ICakeContext
+    - id: templateFilePath
+      type: Cake.Core.IO.FilePath
+    return:
+      type: System.Action{System.IO.TextWriter,System.String}
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function CompileTemplate(ctx As ICakeContext, templateFilePath As FilePath) As Action(Of TextWriter, String)
+  overload: Cake.Handlebars.HandlebarsAliases.CompileTemplate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Cake.Handlebars
+  commentId: N:Cake.Handlebars
+  isExternal: false
+  name: Cake.Handlebars
+  nameWithType: Cake.Handlebars
+  fullName: Cake.Handlebars
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Cake.Handlebars.HandlebarsAliases.RenderTemplate*
+  commentId: Overload:Cake.Handlebars.HandlebarsAliases.RenderTemplate
+  isExternal: true
+  name: RenderTemplate
+  nameWithType: HandlebarsAliases.RenderTemplate
+  fullName: Cake.Handlebars.HandlebarsAliases.RenderTemplate
+- uid: Cake.Core.ICakeContext
+  parent: Cake.Core
+  isExternal: true
+  name: ICakeContext
+  nameWithType: ICakeContext
+  fullName: Cake.Core.ICakeContext
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Cake.Core
+  commentId: N:Cake.Core
+  isExternal: false
+  name: Cake.Core
+  nameWithType: Cake.Core
+  fullName: Cake.Core
+- uid: Cake.Handlebars.HandlebarsAliases.CompileTemplate*
+  commentId: Overload:Cake.Handlebars.HandlebarsAliases.CompileTemplate
+  isExternal: true
+  name: CompileTemplate
+  nameWithType: HandlebarsAliases.CompileTemplate
+  fullName: Cake.Handlebars.HandlebarsAliases.CompileTemplate
+- uid: System.Func{System.Object,System.String}
+  commentId: '!:System.Func{System.Object,System.String}'
+  parent: System
+  definition: System.Func`2
+  name: Func<Object, String>
+  nameWithType: Func<Object, String>
+  fullName: System.Func<System.Object, System.String>
+  nameWithType.vb: Func(Of Object, String)
+  fullName.vb: System.Func(Of System.Object, System.String)
+  name.vb: Func(Of Object, String)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`2
+  commentId: '!:System.Func`2'
+  isExternal: true
+  name: Func<, >
+  nameWithType: Func<, >
+  fullName: System.Func<, >
+  nameWithType.vb: Func(Of , )
+  fullName.vb: System.Func(Of , )
+  name.vb: Func(Of , )
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cake.Core.IO.FilePath
+  commentId: '!:Cake.Core.IO.FilePath'
+  parent: Cake.Core.IO
+  isExternal: true
+  name: FilePath
+  nameWithType: FilePath
+  fullName: Cake.Core.IO.FilePath
+- uid: System.Action{System.IO.TextWriter,System.String}
+  commentId: '!:System.Action{System.IO.TextWriter,System.String}'
+  parent: System
+  definition: System.Action`2
+  name: Action<TextWriter, String>
+  nameWithType: Action<TextWriter, String>
+  fullName: System.Action<System.IO.TextWriter, System.String>
+  nameWithType.vb: Action(Of TextWriter, String)
+  fullName.vb: System.Action(Of System.IO.TextWriter, System.String)
+  name.vb: Action(Of TextWriter, String)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Cake.Core.IO
+  commentId: N:Cake.Core.IO
+  isExternal: false
+  name: Cake.Core.IO
+  nameWithType: Cake.Core.IO
+  fullName: Cake.Core.IO
+- uid: System.Action`2
+  commentId: '!:System.Action`2'
+  isExternal: true
+  name: Action<, >
+  nameWithType: Action<, >
+  fullName: System.Action<, >
+  nameWithType.vb: Action(Of , )
+  fullName.vb: System.Action(Of , )
+  name.vb: Action(Of , )
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
