@@ -10,7 +10,7 @@
 var target = Argument<string>("target", "Default");
 var configuration = Argument<string>("configuration", "Release");
 var fallbackVersion = Argument<string>("force-version", EnvironmentVariable("FALLBACK_VERSION") ?? "0.1.0");
-var buildFrameworks = Argument("frameworks", "netstandard1.6;net46");
+var buildFrameworks = Argument("frameworks", "netstandard2.0;net46");
 
 ///////////////////////////////////////////////////////////////////////////////
 // VERSIONING
