@@ -1,5 +1,5 @@
 #tool "GitVersion.CommandLine"
-#tool nuget:?package=docfx.console
+#tool nuget:?package=docfx.console&version=2.33.2
 #addin nuget:?package=Cake.DocFx
 #load "./build/helpers.cake"
 
