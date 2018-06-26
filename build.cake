@@ -1,5 +1,5 @@
 #tool "GitVersion.CommandLine"
-#tool nuget:?package=docfx.console
+#tool nuget:?package=docfx.console&version=2.33.2
 #addin nuget:?package=Cake.DocFx
 #load "./build/helpers.cake"
 
@@ -10,7 +10,7 @@
 var target = Argument<string>("target", "Default");
 var configuration = Argument<string>("configuration", "Release");
 var fallbackVersion = Argument<string>("force-version", EnvironmentVariable("FALLBACK_VERSION") ?? "0.1.0");
-var buildFrameworks = Argument("frameworks", "netstandard1.6;net46");
+var buildFrameworks = Argument("frameworks", "netstandard2.0");
 
 ///////////////////////////////////////////////////////////////////////////////
 // VERSIONING
