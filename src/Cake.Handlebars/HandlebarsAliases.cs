@@ -13,30 +13,32 @@ namespace Cake.Handlebars
     public static class HandlebarsAliases
     {
         [CakeMethodAlias]
-        public static string RenderTemplate(this ICakeContext ctx, string template, object data) {
+        public static RenderResult RenderTemplate(this ICakeContext ctx, string template, object data) {
             ctx = ctx ?? throw new ArgumentNullException(nameof(ctx));
             var compiled = Hbs.Compile(template);
-            return compiled(data);
+            return new RenderResult(ctx, compiled(data));
         }
 
         [CakeMethodAlias]
-        public static string RenderTemplateFromFile(this ICakeContext ctx, FilePath templateFilePath, object data) {
+        public static RenderResult RenderTemplateFromFile(this ICakeContext ctx, FilePath templateFilePath, object data) {
             ctx = ctx ?? throw new ArgumentNullException(nameof(ctx));
             var file = new TemplateFileReader(ctx.FileSystem, templateFilePath);
-            return file.RenderTemplate(data);
+            return new RenderResult(ctx, file.RenderTemplate(data));
         }
 
         [CakeMethodAlias]
-        public static Func<object, string> CompileTemplate(this ICakeContext ctx, string template) {
+        public static Func<object, RenderResult> CompileTemplate(this ICakeContext ctx, string template) {
             ctx = ctx ?? throw new ArgumentNullException(nameof(ctx));
-            return Hbs.Compile(template);
+            return RenderResult.FromCompiledTemplate(ctx, Hbs.Compile(template));
         }
 
         [CakeMethodAlias]
-        public static Func<object, string> CompileTemplateFromFile(this ICakeContext ctx, FilePath templateFilePath) {
+        public static Func<object, RenderResult> CompileTemplateFromFile(this ICakeContext ctx, FilePath templateFilePath) {
             ctx = ctx ?? throw new ArgumentNullException(nameof(ctx));
             var file = new TemplateFileReader(ctx.FileSystem, templateFilePath);
-            return file.CompileTemplate();
+            return RenderResult.FromCompiledTemplate(ctx, file.CompileTemplate());
         }
+
+        
     }
 }
