@@ -1,0 +1,11 @@
+#recipe Docs
+
+// Customize your settings and add new ones here
+Settings[Keys.Host] = "agc93.github.io";
+Settings[DocsKeys.Title] = "Cake.Handlebars";
+Settings[DocsKeys.SourceFiles] = "../../src/**/*.cs";
+Settings[DocsKeys.ProcessIncludes] = true;
+//Settings[DocsKeys.Logo] = "assets/img/appIcon.png";
+Settings[DocsKeys.IncludeGlobalNamespace] = false;
+
+// Add any pipeline customizations here

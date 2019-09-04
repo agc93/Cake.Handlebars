@@ -1,4 +1,5 @@
-# Cake.Handlebars
+Title: Cake.Handlebars
+---
 
 A simple Cake addin powered by Handlebars.Net for rendering and compiling Handlebars templates.
 
@@ -6,5 +7,5 @@ A simple Cake addin powered by Handlebars.Net for rendering and compiling Handle
 
 Click the tabs at the top of the page to navigate:
 
-- **Documentation**: General documentation
-- **Reference**: Full API documentation
+- **Docs**: General documentation
+- **API**: Full API documentation

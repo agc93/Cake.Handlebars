@@ -1,7 +1,11 @@
-#tool "GitVersion.CommandLine"
-#tool nuget:?package=docfx.console&version=2.33.2
-#addin nuget:?package=Cake.DocFx
+#module nuget:?package=Cake.BuildSystems.Module&version=0.3.2
+
+#tool nuget:?package=GitVersion.CommandLine
+#tool nuget:?package=Wyam&version=2.2.7
+
+#addin nuget:?package=Cake.Wyam&version=2.2.7
 #load "./build/helpers.cake"
+
 
 ///////////////////////////////////////////////////////////////////////////////
 // ARGUMENTS
@@ -138,9 +142,11 @@ Task("Generate-Docs")
 	.IsDependentOn("Build")
 	.Does(() =>
 {
-	DocFxMetadata("./docfx/docfx.json");
-	DocFxBuild("./docfx/docfx.json");
-	Zip("./docfx/_site/", artifacts + "/docfx.zip");
+	Wyam(new WyamSettings {
+		RootPath = "./docs/",
+		OutputPath = "../" + artifacts + "docs/wwwroot/"
+	});
+	Zip(artifacts + "docs/", artifacts + "docs/site.zip");
 });
 
 Task("Post-Build")
@@ -180,8 +186,8 @@ Task("NuGet")
 		Summary			= "A simple Cake addin for Handlebars templates.",
 		ProjectUrl		= new Uri("https://github.com/agc93/Cake.Handlebars"),
 		IconUrl			= new Uri("https://cdn.rawgit.com/cake-contrib/graphics/a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png"),
-		LicenseUrl		= new Uri("https://raw.githubusercontent.com/agc93/Cake.Handlebars/master/LICENSE"),
-		Copyright		= "Alistair Chapman 2017",
+		License			= new NuSpecLicense() { Type = "expression", Value = "MIT" },
+		Copyright		= "Alistair Chapman 2019",
 		Tags			= new[] { "cake", "build", "script", "handlebars", "templates" },
 		OutputDirectory = artifacts + "/package",
 		Files			= content,

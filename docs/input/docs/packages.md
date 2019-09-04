@@ -1,4 +1,5 @@
-# Packages
+Title: Packages
+---
 
 You can include the addin in your script with:
 
@@ -13,5 +14,4 @@ The NuGet prerelease packages are automatically built and deployed from the `dev
 
 Versioning is predominantly SemVer-compliant so you can set your version constraints if you're worried about changes.
 
-> [!TIP]
 > These packages include Handlebars.Net so you don't need to install anything else.

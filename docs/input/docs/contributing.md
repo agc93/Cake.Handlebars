@@ -1,4 +1,5 @@
-# Contributing
+Title: Contributing
+---
 
 This is very much an active project so any and all contributions are welcome, even just finding issues!
 

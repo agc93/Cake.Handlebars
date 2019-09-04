@@ -1,6 +1,7 @@
-# Getting Started
+Title: Getting Started
+Order: 1
+---
 
-> [!TIP]
 > These packages include Handlebars.Net so you don't need to install anything else.
 
 ## Including the addin
@@ -51,5 +52,17 @@ Information(compiled(new { name = "World"}));
 Information(compiled(new { name = "Cake"}));
 ```
 
-> [!TIP]
 > `Cake.Handlebars` doesn't currently expose the more advanced `Action<TextWriter, string>`-based compilation output. Raise an issue on GitHub if you need this output.
+
+### Writing to file
+
+While the above examples will work anywhere you want the `string` output, you can also write directly to a file using the fluent `WriteToFile` method:
+
+```csharp
+RenderTemplate("Hello {{ name }}!", new { name = "World"}).WriteToFile("./output.txt");
+```
+
+```csharp
+var compiled = CompileTemplate("Hello {{ name}}!");
+var result = compiled(new { name = "World"}).WriteToFile("./output.txt");
+```
