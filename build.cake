@@ -140,11 +140,13 @@ Task("Run-Unit-Tests")
 
 Task("Generate-Docs")
 	.IsDependentOn("Build")
+	.ContinueOnError()
 	.Does(() =>
 {
 	Wyam(new WyamSettings {
 		RootPath = "./docs/",
-		OutputPath = "../" + artifacts + "docs/wwwroot/"
+		OutputPath = "../" + artifacts + "docs/wwwroot/",
+		Verbose = true
 	});
 	Zip(artifacts + "docs/", artifacts + "docs/site.zip");
 });
