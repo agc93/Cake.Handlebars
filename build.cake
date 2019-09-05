@@ -140,7 +140,6 @@ Task("Run-Unit-Tests")
 
 Task("Generate-Docs")
 	.IsDependentOn("Build")
-	.ContinueOnError()
 	.Does(() =>
 {
 	Wyam(new WyamSettings {
@@ -149,6 +148,9 @@ Task("Generate-Docs")
 		Verbose = true
 	});
 	Zip(artifacts + "docs/", artifacts + "docs/site.zip");
+}).OnError(ex => 
+{
+	Warning("Error generating documentation!");
 });
 
 Task("Post-Build")
